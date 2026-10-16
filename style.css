@@ -6,7 +6,7 @@
     font-family: sans-serif;
 }
 .parent{
-    max-width: 100vw;
+    max-width: 1600px;
     height: 100vh;
     background: #000;
     display: flex;
@@ -50,6 +50,7 @@ nav{
 nav a{
     text-decoration: none;
     color: black;
+    padding: 10px ;
 }
 .blue:hover{
     background-color: #dad2d2;
@@ -63,9 +64,18 @@ nav a{
     background-color: #dad2d2;
     color: rgb(150, 150, 209);
 }
+.green:hover{
+    background-color: #dad2d2;
+    color: rgb(16, 216, 50);
+}
+.b1:hover{
+    background-color: #dad2d2;
+    text-decoration: underline;
 
+}
 .icon{ 
      margin-top: 30px;
+     font-size: 15px;
 }
 input{
     border-radius: 10px;
@@ -119,7 +129,7 @@ input:hover{
     cursor: pointer;
     width: 100px;
     text-align: center;
-
+    
 }
 .web{
 
@@ -150,39 +160,103 @@ width: 60px;
     background-color: rgb(195, 206, 199);
     border-radius: 30px;
 }
-.web:hover , .html:hover{
+.web:hover , .html:hover, .Guides:hover,.flexible:hover,.basic:hover{
     text-decoration: underline;
     
 }
+.sec2{
+    width: 100vw;
+    height: 100vh;
+    background-color: chocolate;
+    display: flex;
+    margin: auto;
+}
 .sidebar{
-    width: 200px;
+    width: 650px;
     height: inherit;
     background-color: aquamarine;
     position: sticky;
     overflow: auto;
+    margin: auto;
+    cursor: pointer;
+    
 }
 .sidebar li{
     padding: 7px;
+
+}
+.sidebar li:hover{
+    background-color: #dad2d2;
+    margin: 10px;
 }
 .flexbox  a{
     display: none;
+
 }
 .flexbox:hover a{
     display: block;
+
 }
+.list{
+    margin-left: 20%;
+    line-height: 3vmax;
+    color: #000;
+    text-decoration: none;
+}
+.list:hover{
+    color:rgb(37, 37, 151) ;
+    text-decoration: underline;
+}
+
 .content{
     height: inherit;
-    background-color: rgb(239, 179, 137);
-    flex-grow: 1;
+    background-color: rgb(150, 105, 73);
+    /* flex-grow: 1; */
     overflow: auto;
+    padding: 30px;
+    
+}
+.content a{
+    text-decoration: none;
+}
+.content a:hover{
+    text-decoration: underline;
+}
+p{
+    margin-top: 50px;
+}
+aside h1{
+    font-size: 20px;
+}
+h2{
+    margin-top: 10px;
+}
+h2>a{
+    color: #000;
+    text-decoration: none;
+}
+h2>a:hover{
+    text-decoration: underline;
 }
 .links{
     height: 100vh;
-    background-color: blue;
-    width: 150px;
-     border-left: 5px solid black;
-     overflow: auto;
+    background-color: rgb(244, 245, 243);
+    width: 220px;
+    overflow: auto;
+    padding: 30px;
    
+}
+aside a{
+    color: #000;
+   display: block;
+   margin-top: 10px;
+   text-decoration: none;
+}
+aside a:hover{
+    text-decoration: underline;
+    color: rgb(25, 28, 218);
+    background-color: #dad2d2;
+    border-left: 2px solid blue;
 }
 .btn {
     display: none;
