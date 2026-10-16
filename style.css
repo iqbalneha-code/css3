@@ -5,18 +5,15 @@
     scroll-behavior: smooth;
     font-family: sans-serif;
 }
-/* .parent{
+.parent{
     max-width: 100vw;
     height: 100vh;
     background: #000;
     display: flex;
     margin: auto;
     
-} */
- body{
-   text-align: center;
-    
- }
+}
+ 
 header{
    /* max-width: 1600px; */
    width: 100vw;
@@ -96,7 +93,7 @@ input:hover{
     font-size: 12px;
     margin: auto;
     flex-grow: 1;
-    
+    justify-content: space-between;
      
     
 }
@@ -129,7 +126,6 @@ input:hover{
     cursor: pointer;
     width: 40px;
     text-align: center;
-    margin-left:15%;
 }
 .langbar{
     display: flex;
@@ -143,7 +139,6 @@ input:hover{
 width: 60px;
     text-align: center;
     cursor: pointer;
-    margin-right: 25%;
 }
 .theme{
     width: 60px;
@@ -159,12 +154,21 @@ width: 60px;
     text-decoration: underline;
     
 }
-/* .sidebar{
+.sidebar{
     width: 200px;
     height: inherit;
     background-color: aquamarine;
     position: sticky;
     overflow: auto;
+}
+.sidebar li{
+    padding: 7px;
+}
+.flexbox  a{
+    display: none;
+}
+.flexbox:hover a{
+    display: block;
 }
 .content{
     height: inherit;
@@ -182,7 +186,7 @@ width: 60px;
 }
 .btn {
     display: none;
-} */
+}
 /* @media(max-width){
 
 } */ 
