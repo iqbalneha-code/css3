@@ -102,15 +102,32 @@ input:hover{
 }
 .html{
     cursor: pointer;
-    width: 70px;
+    width: 40px;
     text-align: center;
     
 }
-.web{
-    /* width: 60px;
-    text-align:center; */
+.Guides{
     cursor: pointer;
-    width: 70px;
+    width: 50px;
+    text-align: center;
+
+}
+.flexible{
+    cursor: pointer;
+    width: 120px;
+    text-align: center;
+
+}
+.basic{
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+
+}
+.web{
+
+    cursor: pointer;
+    width: 40px;
     text-align: center;
     margin-left:15%;
 }
