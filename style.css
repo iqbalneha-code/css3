@@ -190,6 +190,14 @@ width: 60px;
     cursor: pointer;
    top: 98px; 
 }
+.sidebar a{
+    color: var(--default-color);
+    text-decoration: none;
+}
+.sidebar a:hover{
+    color: var(--link-color);
+    text-decoration: underline;
+}
 .sidebar li{
     padding: 7px;
 
