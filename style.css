@@ -312,6 +312,12 @@ ul{
     width:500px;
     margin: auto;
 }
+.content>.para{
+    height: 250px;
+    width: 600px;
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--link-color);
+}
 /* main content end */
 /* right side bar start */
 .links{
