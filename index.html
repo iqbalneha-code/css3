@@ -106,6 +106,40 @@
 
     <h2><a href="#">The two axes of flexbox</a></h2>
 <p>When working with flexbox you need to think in terms of two axes — the <a href="">main axis</a> and the <a href="">cross axis</a>. The main axis is defined by the <a href="">flex-direction</a> property, and the cross axis runs perpendicular to it. Everything we do with flexbox refers back to these axes, so it is worth understanding how they work from the outset.</p>
+<h3><a href="">The main axis</a></h3>
+<p>The <a href="">main axis</a> is defined by flex-direction, which has four possible values:</p>
+<ul>
+    <li><span>row</span></li>
+    <li><span>row-reverse</span></li>
+    <li><span>column</span></li>
+    <li><span>column-reverse</span></li>
+</ul>
+
+<p>Should you choose <span>row</span> or <span> row-reverse</span>, your main axis will run along the row in the <b>inline direction</b>.</p>
+   <div class="box">
+   <p class="inbox"><i class="fa-solid fa-arrow-left-long"></i> Main axis-flex direction:row<i class="fa-solid fa-arrow-right-long"></i></p>
+      <div class="mainbox">
+       <div class=" box">a</div>
+       <div class=" box">b</div>
+    <div class=" box">c</div>
+   </div>
+<p>Choose <span>column</span> or <span>column-reverse</span> and your main axis will run in the <b>block direction</b>, from the top of the page to the bottom.</p>
+    <img class="img1" src="./assests/images/basics2.svg" alt="basic concept of flexbox">
+
+<h3><a href="">The cross axis</a></h3>
+<p>The cross axis runs perpendicular to the <a href="">main axis</a>. Therefore, if your <span>flex-direction</span> (main axis) is set to <span>row</span> or <span>row-reverse</span> the cross axis runs down the columns.</p>
+<img class="img1" src="./assests/images/basics3.svg" alt="">
+
+<p>If your main axis is <span>column</span> or <span>column-reverse </span>then the cross axis runs along the rows.</p>
+<img src="./assests/images/basics4.svg" alt="" class="img1">
+<h2><a href="">Start and end lines</a></h2>
+
+<p>Another vital area of understanding is how flexbox makes no assumption about the writing mode of the document. Flexbox doesn't just assume that all lines of text start at the top left of a document and run towards the right-hand side, with new lines appearing one under the other. Rather, it supports all writing modes, like other <a href="">logical properties and values</a>.</p>
+<p>You can <a href="">read more about the relationship between flexbox and writing modes</a> in a later article; however, the following description should help explain why we do not talk about left and right and top and bottom when we describe the direction that our flex items flow in.</p>
+
+<p>If the <span>flex-direction</span> is <span>row</span> and I am working in English, then the start edge of the main axis will be on the left, the end edge on the right.</p>
+<img src="./assests/images/basics6.svg" alt="" class="img1">
+
 
 
 
@@ -113,11 +147,12 @@
 
 
 </div>
+</div>
 <div class="x">
    <button class="btn">open it</button>
     <div class="links">
     <aside><h1>In this article</h1>
-<a href="">The two axes of flex box</a>
+<a  href="#flexbox">The two axes of flex box</a>
 <a href="">Start and end lines</a>
 <a href="">Multi-line flex containers with flex-wrap</a>
 <a href="">The flex-flow shorthand</a>
