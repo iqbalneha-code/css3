@@ -162,12 +162,33 @@
 <h2><a id="multi-line" href="">Multi-line flex containers with flex-wrap</a></h2>
 <p>While flexbox is a one dimensional model, it is possible to make flex items wrap across multiple lines. If you do this, you should consider each line as a new flex container. Any space distribution will happen across each line, without reference to the previous or subsequent lines.</p>
 <p>To cause wrapping behavior add the property <a href="">flex-wrap</a> with a value of <span>wrap</span>. Now, if your items are too large to all display in one line, they will wrap onto another line. The live sample below contains items that have been given a <span>width</span>. The total width of the items is too wide for the flex container. As <span>flex-wrap</span> is set to <span>wrap</span>, the items wrap across multiple lines. If you set it to nowrap, which is the initial value, they will shrink to fit the container. They shrink because they are using initial flexbox values, including flex-shrink: 1, that allows items to shrink. Using nowrap would cause an overflow if the items were not able to shrink, or could not shrink small enough to fit.</p>
-<code>
-<span class="">div</span>
+<p>Find out more about wrapping flex items in the guide <a href="">Mastering wrapping of flex items</a>.</p>
+<h2><a id="shorthand" href="">The flex-flow shorthand</a></h2>
+<p>You can combine the two properties <span>flex-direction</span> and <span>flex-wrap</span> into the <a href="">flex-flow</a> shorthand.</p>
+<p>In the live sample below, try changing the first value to one of the allowable values for <span>flex-direction</span> - row, <span>row-reverse</span>, <span>column</span> or <span>column-reverse</span>, and also change the second to <span>wrap</span> and <span>nowrap</span>.</p>
+<h3><a id="properties" href="">Properties applied to flex items</a></h3>
+<p>To control the inline-size of each flex item, we target them directly via three properties:</p>
+<ul>
+<li><a href="">flex-grow</a></li>
+<li><a href="">flex-shrink</a></li>
+<li><a href="">flex-basis</a></li>
+</ul>
+<p>We will take a brief look at these properties below, but if you want more comprehensive information, take a look at the <a href="">Controlling ratios of flex items on the main axis guide.</a></p>
+<p>Before we can make sense of these properties we need to consider the concept of available space. What we are doing when we change the value of these flex properties is to change the way that available space is distributed among our items. This concept of <b>available space</b> is also important when we come to look at aligning items.</p>
+<p>If we have three 100 pixel-wide items in a container which is 500 pixels wide, then the space we need to lay out our items is 300 pixels. This leaves 200 pixels of available space. If we don't change the initial values then flexbox will put that space after the last item.</p>
+<img class="img1" src="./assests/images/basics7.svg" alt="basics of flex">
 
+<p>If we instead would like the items to grow and fill the space, then we need to have a method of distributing the leftover space between the items. The flex properties that we apply to the items themselves, enable dictating how that available space should be distributed among the sibling <span>flex </span>items.</p>
+<h3><a href="">The flex-basis property</a></h3>
+<p>The <span>flex-basis</span> is what defines the size of that item in terms of the space it leaves as available space. The initial value of this property is <span>auto</span> — in this case the browser looks to see if the item has a size. In the example above, all of the items have a width of 100 pixels. This is used as the <span>flex-basis</span>.</p>
+<p>If the items don't have a size then the content's size is used as the flex-basis. This is why when we just declare <span>display: flex </span>on the parent to create flex items, the items all move into a row and take only as much space as they need to display their contents.</p>
 
+<h3><a href="">The flex-grow property</a></h3>
+<p>With the <span>flex-grow</span> property set to a positive integer, if there is available space, the flex item can grow along the main axis from its <span>flex-basis</span>. Whether the item stretches to take up all the available space on that axis, or just a portion of the available space depends on if the other items are allowed to grow too and the value of their <span>flex-grow</span> properties.</p>
+<p>Each item with a positive value consumes a portion of any available space based on their flex-grow value. If we gave all of our items in the example above a flex-grow value of 1 then the available space in the flex container would be equally shared between our items and they would stretch to fill the container on the main axis. If we give our first item a flex-grow value of 2, and the other items a value of 1 each, there are a total of 4 parts; 2 parts of the available space will be given to the first item (100px out of 200px in the case of the example above) and 1 part each the other two (50px each out of the 200px total).</p>
+<h3><a href="">The flex-shrink property</a></h3>
+<p>Where the <span>flex-grow</span> property deals with adding space in the main axis, the <span>flex-shrink</span> property controls how it is taken away. If we do not have enough space in the container to lay out our items, and <span> flex-shrink</span> is set to a positive integer, then the item can become smaller than the <span></span>. As with flex-grow, different values can be assigned in order to cause one item to shrink faster than others — an item with a higher value set for flex-shrink will shrink faster than its siblings that have lower values.</p>
 
-</code>
 
 
 
@@ -188,8 +209,8 @@
 <a href="#Start">Start and end lines</a>
 <a href="#container">The flex container</a>
 <a href="#multi-line">Multi-line flex containers with flex-wrap</a>
-<a href="">The flex-flow shorthand</a>
-<a href="">Properties applied to flex items</a>
+<a href="#shorthand">The flex-flow shorthand</a>
+<a href="#properties">Properties applied to flex items</a>
 <a href="">Alignment, justification and distribution of free space between items</a>
 <a href="">Next Steps</a>
 

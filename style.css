@@ -28,6 +28,8 @@ header{
    display: flex;
    margin: auto;
    font-size: 10px;
+   position: sticky;
+   top: 0;
 }
 .header{
  max-width: 1600px;
@@ -181,7 +183,7 @@ width: 60px;
 }
 /* sidebar start */
 .sidebar{
-    width: 650px;
+    width: 700px;
     height: inherit;
     background-color: var(--base-color);
     position: sticky;
@@ -189,6 +191,7 @@ width: 60px;
     margin: auto;
     cursor: pointer;
    top: 98px; 
+   border-right: 1px solid grey;
 }
 .sidebar a{
     color: var(--default-color);
@@ -232,11 +235,14 @@ width: 60px;
 .content{
     height: inherit;
     background-color: var(--base-color);
-    /* flex-grow: 1; */
+    flex-grow: 1;
     overflow: auto;
     padding: 30px;
     position: sticky;
     z-index: 1;
+    word-spacing: 2px;
+    
+
     
 }
 .content a{
@@ -267,6 +273,7 @@ ul{
 }
 .content span{
     background-color: var(--bg-color);
+    border-radius: 2px;
 }
 .box{
     height: 200px;
