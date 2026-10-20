@@ -419,6 +419,16 @@ aside a:hover {
     display: none;
 }
 
-/* @media(max-width){
+@media(max-width:1000px) {
+    .btn {
+        display: flex;
+    }
 
-} */
+    .links {
+        display: block;
+    }
+
+    .x:hover .links {
+        display: block;
+    }
+}
