@@ -27,17 +27,19 @@ header {
     /* max-width: 1600px; */
     width: 100vw;
     background-color: rgba(245, 245, 245, 0.671);
-    height: 70px;
+    min-height: 70px;
     display: flex;
     margin: auto;
     font-size: 10px;
-    position: sticky;
-    top: 0;
+    /* position: sticky;
+    top: 0; */
+    /* flex-wrap: wrap;
+    flex-shrink: 1; */
 }
 
 .header {
     max-width: 1600px;
-    min-height: 70px;
+    /* min-height: 70px; */
     margin: auto;
     display: flex;
     gap: 30px;
@@ -211,7 +213,6 @@ input:hover {
 .sec2 {
     width: 100vw;
     height: 100vh;
-    background-color: chocolate;
     display: flex;
     margin: auto;
 }
@@ -425,10 +426,18 @@ aside a:hover {
     }
 
     .links {
-        display: block;
+        display: none;
     }
 
     .x:hover .links {
         display: block;
+    }
+    nav .arrow{
+        display: none;
+    }
+}
+@media(max-width:800px){
+    .sidebar{
+        display: none;
     }
 }
