@@ -23,14 +23,14 @@
 
 /* ///////////////header start////////// */
 header {
-    /* max-width: 1600px; */
-    width: 100vw;
+    max-width: 100vw;
+    /* max-width: 100%; */
     background-color: rgba(245, 245, 245, 0.671);
     min-height: 70px;
-    display: flex;
+    /* display: flex; */
     margin: auto;
     font-size: 10px;
-    justify-content: center;
+    /* justify-content: center; */
     /* position: sticky;
     top: 0; */
     /* flex-wrap: wrap;
@@ -39,6 +39,7 @@ header {
 
 .header {
     max-width: 1600px;
+    /* max-width: 80%; */
     /* min-height: 70px; */
     margin: auto;
     display: flex;
@@ -412,18 +413,21 @@ aside a:hover {
 
 /* right side bar end */
 .y{
-    /* background: #fff000; */
+     width: 20vw;
+    height: 100vh;
     display: flex;
-    align-items: center;
+    margin: auto;
 }
 
 .btn,
 .open {
-    background-color: var(--link-color);
+    background-color: var(--default-color);
     padding: 10px;
     color: var(--base-color);
     transition: color 0.3s ease, background-color 0.3s ease-in-out;
     display: none;
+    width: 60px;
+    height: 50px;
 }
 
 @media(max-width:1000px) {
@@ -454,7 +458,7 @@ aside a:hover {
     }
 
     .y:hover .sidebar {
-        background: #000;
+    
         display: block;
     }
 
