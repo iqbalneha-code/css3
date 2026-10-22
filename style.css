@@ -16,7 +16,6 @@
 .parent {
     max-width: 1600px;
     height: 100vh;
-    background: var(--default-color);
     display: flex;
     margin: auto;
 
@@ -31,6 +30,7 @@ header {
     display: flex;
     margin: auto;
     font-size: 10px;
+    justify-content: center;
     /* position: sticky;
     top: 0; */
     /* flex-wrap: wrap;
@@ -411,8 +411,14 @@ aside a:hover {
 }
 
 /* right side bar end */
+.y{
+    /* background: #fff000; */
+    display: flex;
+    align-items: center;
+}
 
-.btn {
+.btn,
+.open {
     background-color: var(--link-color);
     padding: 10px;
     color: var(--base-color);
@@ -432,12 +438,28 @@ aside a:hover {
     .x:hover .links {
         display: block;
     }
-    nav .arrow{
+
+    nav .arrow {
+        display: none;
+    }
+
+    .open {
         display: none;
     }
 }
-@media(max-width:800px){
-    .sidebar{
+
+@media(max-width:800px) {
+    .sidebar {
         display: none;
     }
+
+    .y:hover .sidebar {
+        background: #000;
+        display: block;
+    }
+
+    .open {
+        display: flex;
+    }
+
 }
